@@ -1,0 +1,7 @@
+[init]
+	defaultBranch = main
+[user]
+	name = Sander van Dorsten
+	email = sandervandorsten@gmail.com
+[core]
+	autocrlf = input
