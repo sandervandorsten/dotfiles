@@ -51,6 +51,7 @@ cask "microsoft-auto-update"
 cask "microsoft-azure-storage-explorer"
 cask "microsoft-office"
 cask "microsoft-teams"
+cask "multipass" # Ubuntu VM
 cask "notable"
 cask "postman"
 cask "pycharm"
