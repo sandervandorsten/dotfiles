@@ -69,6 +69,9 @@ cask "vlc"
 cask "whatsapp"
 cask "zoom"
 
+# Apps Leisure
+cask "vcv-rack" # virtual modular synthesiser
+cask "steam"
+
 # Apps installed through Apple Store
 mas "Be Focused", id: 973134470
-mas "iMovie", id: 408981434
