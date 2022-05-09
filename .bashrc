@@ -5,3 +5,4 @@ export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 . "$HOME/.cargo/env"
 alias config='/usr/bin/git --git-dir=/Users/sander/.cfg/ --work-tree=/Users/sander'
+complete -C aws_completer aws
