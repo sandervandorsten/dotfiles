@@ -8,20 +8,16 @@ brew "readline"
 brew "sqlite"
 brew "xz"
 brew "autojump"
-brew "azure-cli"
 brew "brew-cask-completion"
 brew "python@3.9"
 brew "doctl"
-brew "geos"
-brew "gdal"
 brew "htop"
 brew "kubernetes-cli"
-brew "mas"
+brew "mas" # Mac Application Store interface
 brew "minikube"
 brew "netcat"
 brew "openssl@3"
 brew "poetry"
-brew "proj"
 brew "psqlodbc"
 brew "pyenv"
 brew "pyenv-virtualenv"
@@ -35,6 +31,18 @@ brew "zsh-autosuggestions"
 brew "zsh-completions"
 brew "zsh-history-substring-search"
 brew "zsh-syntax-highlighting"
+
+## Geographical binaries
+brew "geos"
+brew "gdal"
+brew "proj"
+
+# Azure
+brew "azure-cli"
+cask "microsoft-azure-storage-explorer"
+
+# Amazon Web Services
+brew "awscli"
 
 # Apps
 cask "alfred"
@@ -50,7 +58,6 @@ cask "lastpass"
 cask "lens"
 cask "lepton"
 cask "microsoft-auto-update"
-cask "microsoft-azure-storage-explorer"
 cask "microsoft-office"
 cask "microsoft-teams"
 cask "multipass" # Ubuntu VM
@@ -69,7 +76,7 @@ cask "vlc"
 cask "whatsapp"
 cask "zoom"
 
-# Apps Leisure
+## Leisure
 cask "vcv-rack" # virtual modular synthesiser
 cask "steam"
 
