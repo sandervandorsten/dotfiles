@@ -2,6 +2,7 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
+tap "aws/tap"
 
 # Binaries
 brew "readline"
@@ -43,6 +44,7 @@ cask "microsoft-azure-storage-explorer"
 
 # Amazon Web Services
 brew "awscli"
+brew "aws-sam-cli"
 
 # Apps
 cask "alfred"
