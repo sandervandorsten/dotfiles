@@ -46,6 +46,9 @@ cask "microsoft-azure-storage-explorer"
 brew "awscli"
 brew "aws-sam-cli"
 
+# Google Cloud
+cask "google-cloud-sdk"
+
 # Apps
 cask "alfred"
 cask "caffeine"
