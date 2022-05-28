@@ -1,6 +1,7 @@
 # Taps
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-drivers" # For Mac Drivers s.a. Logitech Options
 tap "homebrew/core"
 tap "aws/tap"
 
@@ -48,6 +49,11 @@ brew "aws-sam-cli"
 
 # Google Cloud
 cask "google-cloud-sdk"
+
+# Drivers
+cask "corsair-icue" # Corsair M55 RGB Pro Mouse
+cask "logitech-options" # Logitech MX Keys Mini Keyboard
+
 
 # Apps
 cask "alfred"
