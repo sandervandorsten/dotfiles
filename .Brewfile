@@ -18,6 +18,7 @@ brew "kubernetes-cli"
 brew "mas" # Mac Application Store interface
 brew "minikube"
 brew "netcat"
+brew "node"
 brew "openssl@3"
 brew "poetry"
 brew "psqlodbc"
