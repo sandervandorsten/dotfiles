@@ -14,6 +14,7 @@ brew "brew-cask-completion"
 brew "python@3.9"
 brew "doctl"
 brew "graphviz"
+brew "helm"
 brew "htop"
 brew "kubernetes-cli"
 brew "mas" # Mac Application Store interface
