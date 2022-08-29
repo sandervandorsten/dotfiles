@@ -75,6 +75,7 @@ cask "lepton"
 cask "microsoft-auto-update"
 cask "microsoft-office"
 cask "microsoft-teams"
+cask "monitorcontrol"
 cask "multipass" # Ubuntu VM
 cask "notable"
 cask "postman"
