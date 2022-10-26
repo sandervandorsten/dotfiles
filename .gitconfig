@@ -5,3 +5,6 @@
 	email = sandervandorsten@gmail.com
 [core]
 	autocrlf = input
+[push]
+	autoSetupRemote = true
+	followTags = true
