@@ -4,6 +4,7 @@ tap "homebrew/cask"
 tap "homebrew/cask-drivers" # For Mac Drivers s.a. Logitech Options
 tap "homebrew/core"
 tap "aws/tap"
+tap "hashicorp/tap"
 
 # Binaries
 brew "readline"
@@ -26,7 +27,7 @@ brew "poetry"
 brew "psqlodbc"
 brew "pyenv"
 brew "pyenv-virtualenv"
-brew "terraform"
+brew "hashicorp/tap/terraform"
 brew "tldr"
 brew "tree"
 brew "virtualenv"
