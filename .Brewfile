@@ -7,6 +7,7 @@ tap "aws/tap"
 tap "hashicorp/tap"
 
 # Binaries
+brew "apache-arrow"
 brew "readline"
 brew "sqlite"
 brew "xz"
@@ -14,9 +15,11 @@ brew "autojump"
 brew "brew-cask-completion"
 brew "python@3.9"
 brew "doctl"
+brew "dive"
 brew "graphviz"
 brew "helm"
 brew "htop"
+brew "kompose"
 brew "kubernetes-cli"
 brew "mas" # Mac Application Store interface
 brew "minikube"
@@ -39,9 +42,9 @@ brew "zsh-history-substring-search"
 brew "zsh-syntax-highlighting"
 
 ## Geographical binaries
-brew "geos"
-brew "gdal"
-brew "proj"
+# brew "geos"
+# brew "gdal"
+# brew "proj"
 
 # Azure
 brew "azure-cli"
@@ -49,7 +52,6 @@ cask "microsoft-azure-storage-explorer"
 
 # Amazon Web Services
 brew "awscli"
-brew "aws-sam-cli"
 
 # Google Cloud
 cask "google-cloud-sdk"
