@@ -3,11 +3,13 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers" # For Mac Drivers s.a. Logitech Options
 tap "homebrew/core"
+tap "buo/cask-upgrade" # interactive Cask upgrading
 tap "aws/tap"
 tap "hashicorp/tap"
 
 # Binaries
 brew "apache-arrow"
+brew "bash"
 brew "readline"
 brew "sqlite"
 brew "xz"
@@ -62,10 +64,8 @@ cask "logitech-options" # Logitech MX Keys Mini Keyboard
 
 
 # Apps
-cask "alfred"
 cask "caffeine"
-cask "dash"
-# cask "discord"
+cask "discord"
 cask "citrix-workspace"
 cask "docker"
 cask "go2shell"
@@ -87,10 +87,8 @@ cask "rectangle"
 cask "slack"
 cask "spotify"
 cask "stack"
-cask "teamviewer"
 cask "telegram"
 cask "todoist"
-cask "vanilla"
 cask "visual-studio-code"
 cask "vlc"
 cask "warp"

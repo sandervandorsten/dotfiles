@@ -2,7 +2,7 @@
 	defaultBranch = main
 [user]
 	name = Sander van Dorsten
-	email = sandervandorsten@gmail.com
+	email = sander.vandorsten@digital-power.com
 [core]
 	autocrlf = input
 [push]
