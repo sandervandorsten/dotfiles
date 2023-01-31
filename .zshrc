@@ -140,3 +140,5 @@ eval "$(pyenv virtualenv-init -)"
 source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 # To add gcloud components to your PATH, add this to your profile:
 source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+# Created by `pipx` on 2023-01-26 16:22:15
+export PATH="$PATH:/Users/sander/.local/bin"

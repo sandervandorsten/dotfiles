@@ -28,6 +28,7 @@ brew "minikube"
 brew "netcat"
 brew "node"
 brew "openssl@3"
+brew "pipx"
 brew "poetry"
 brew "psqlodbc"
 brew "pyenv"
@@ -80,6 +81,7 @@ cask "microsoft-office"
 cask "microsoft-teams"
 cask "monitorcontrol"
 cask "multipass" # Ubuntu VM
+cask "ngrok"
 cask "notable"
 cask "postman"
 cask "pycharm"
@@ -93,6 +95,16 @@ cask "vlc"
 cask "warp"
 cask "whatsapp"
 cask "zoom"
+
+
+## Security
+cask "lulu"
+cask "blockblock"
+cask "knockknock"
+cask "taskexplorer"
+cask "ransomwhere"
+cask "oversight"
+cask "kextviewr"
 
 ## Leisure
 cask "vcv-rack" # virtual modular synthesiser
