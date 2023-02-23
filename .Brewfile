@@ -89,6 +89,7 @@ cask "rectangle"
 cask "slack"
 cask "spotify"
 cask "telegram"
+cask "tg-pro" # temperature checking
 cask "todoist"
 cask "visual-studio-code"
 cask "vlc"
