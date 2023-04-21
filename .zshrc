@@ -142,3 +142,8 @@ source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completi
 source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 # Created by `pipx` on 2023-01-26 16:22:15
 export PATH="$PATH:/Users/sander/.local/bin"
+
+source /Users/sander/.docker/init-zsh.sh || true # Added by Docker Desktop
+
+# Created by Sander van Dorsten on 2023-03-20: Add Docker Desktop for Mac (docker)
+export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
