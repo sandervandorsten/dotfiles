@@ -19,6 +19,7 @@ brew "python@3.9"
 brew "doctl"
 brew "dive"
 brew "jq"
+brew "gh" # Github CLI
 brew "graphviz"
 brew "helm"
 brew "htop"
@@ -66,6 +67,7 @@ cask "logitech-options" # Logitech MX Keys Mini Keyboard
 
 
 # Apps
+cask "adobe-acrobat-reader"
 cask "caffeine"
 cask "discord"
 cask "citrix-workspace"
