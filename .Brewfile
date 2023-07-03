@@ -38,6 +38,7 @@ brew "pyenv-virtualenv"
 brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/packer"
 brew "tldr"
+brew "teleport"
 brew "tree"
 brew "virtualenv"
 brew "zlib"
@@ -88,13 +89,14 @@ cask "monitorcontrol"
 cask "multipass" # Ubuntu VM
 cask "ngrok"
 cask "notable"
+cask "obsidian" # Markdown Editor
 cask "postman"
 cask "pycharm"
 cask "rectangle"
 cask "slack"
 cask "spotify"
+cask "mos" # Smooth Scrolling
 cask "telegram"
-cask "tg-pro" # temperature checking
 cask "todoist"
 cask "visual-studio-code"
 cask "vpn-by-google-one"
