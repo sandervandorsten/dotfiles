@@ -16,7 +16,7 @@ zsh_rc_path="$HOME/.zshrc"
 
 echo "installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-echo "replacing blank .zshrc file with my own"
+echo "replacing blank .zshrc file that oh-my-zsh created with my own"
 mv $zsh_rc_path $HOME/.zshrc.blank
 mv $HOME/.zshrc.pre-oh-my-zsh $zsh_rc_path
 
@@ -24,7 +24,6 @@ mv $HOME/.zshrc.pre-oh-my-zsh $zsh_rc_path
 echo "Checking if antigen config is sourced using ~/.zshrc"
 
 search_line="source /opt/homebrew/share/antigen/antigen.zsh"
-
 
 if grep -qF "$search_line" "$zsh_rc_path"; then
   echo "✅ antigen config is sourced in $HOME/.zshrc."
