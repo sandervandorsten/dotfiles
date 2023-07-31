@@ -1,25 +1,21 @@
 # Taps
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/cask-drivers" # For Mac Drivers s.a. Logitech Options
 tap "homebrew/core"
 tap "buo/cask-upgrade" # interactive Cask upgrading
 tap "aws/tap"
 tap "hashicorp/tap"
 
 # Binaries
-brew "apache-arrow"
 brew "bash"
 brew "readline"
 brew "sqlite"
 brew "xz"
 brew "autojump"
 brew "brew-cask-completion"
-brew "python@3.9"
 brew "doctl"
 brew "dive"
 brew "jq"
-brew "gh" # Github CLI
 brew "graphviz"
 brew "helm"
 brew "htop"
@@ -33,15 +29,21 @@ brew "openssl@3"
 brew "pipx"
 brew "poetry"
 brew "psqlodbc"
-brew "pyenv"
-brew "pyenv-virtualenv"
 brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/packer"
-brew "tldr"
 brew "teleport"
 brew "tree"
-brew "virtualenv"
 brew "zlib"
+
+# python
+brew "python@3.10"
+brew "pyenv"
+brew "pyenv-virtualenv"
+brew "virtualenv"
+
+# ZSH / terminal
+brew "antigen" #plugin manager for zsh
+brew "fzf" #fuzzy search
 brew "zsh"
 brew "zsh-autosuggestions"
 brew "zsh-completions"
@@ -58,7 +60,7 @@ brew "azure-cli"
 cask "microsoft-azure-storage-explorer"
 
 # Amazon Web Services
-brew "awscli"
+# brew "awscli"
 
 # Google Cloud
 cask "google-cloud-sdk"
@@ -72,20 +74,18 @@ cask "logitech-options" # Logitech MX Keys Mini Keyboard
 cask "adobe-acrobat-reader"
 cask "caffeine"
 cask "discord"
-cask "citrix-workspace"
+# cask "citrix-workspace"
 cask "docker"
-cask "filezilla"
 cask "go2shell"
 cask "google-chrome"
 cask "google-drive"
 cask "iterm2"
 cask "lastpass"
 cask "lens"
-cask "lepton"
-cask "microsoft-auto-update"
-cask "microsoft-office"
-cask "microsoft-teams"
-cask "monitorcontrol"
+# cask "microsoft-auto-update"
+# cask "microsoft-office"
+# cask "microsoft-teams"
+cask "monitorcontrol" 
 cask "multipass" # Ubuntu VM
 cask "ngrok"
 cask "notable"
@@ -99,7 +99,6 @@ cask "mos" # Smooth Scrolling
 cask "telegram"
 cask "todoist"
 cask "visual-studio-code"
-cask "vpn-by-google-one"
 cask "vlc"
 cask "warp"
 cask "whatsapp"
@@ -107,17 +106,17 @@ cask "zoom"
 
 
 ## Security
-cask "lulu"
-cask "blockblock"
-cask "knockknock"
-cask "taskexplorer"
-cask "ransomwhere"
-cask "oversight"
-cask "kextviewr"
+# cask "lulu"
+# cask "blockblock"
+# cask "knockknock"
+# cask "taskexplorer"
+# cask "ransomwhere"
+# cask "oversight"
+# cask "kextviewr"
 
 ## Leisure
-cask "vcv-rack" # virtual modular synthesiser
-cask "steam"
+# cask "vcv-rack" # virtual modular synthesiser
+# cask "steam"
 
 # Apps installed through Apple Store
 mas "Be Focused", id: 973134470

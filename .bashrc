@@ -8,3 +8,6 @@ alias config='/usr/bin/git --git-dir=/Users/sander/.cfg/ --work-tree=/Users/sand
 complete -C aws_completer aws
 
 source /Users/sander/.docker/init-bash.sh || true # Added by Docker Desktop
+
+# fzf (Fuzzrysearch) configuration
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

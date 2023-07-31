@@ -76,10 +76,11 @@ ZSH_THEME="RobbyRussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+# Load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 # Load Antigen
-source $ZSH/antigen.zsh
+source /opt/homebrew/share/antigen/antigen.zsh
 
 # Load Antigen configurations
 antigen init ~/.antigenrc
@@ -114,10 +115,10 @@ alias ohmyzsh="code ~/.oh-my-zsh"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # move dotfile to dotfile repo
-function dotfile {
-    mv /home/sander/$1 /home/sander/Code/cfg/$1
-    ln -nfs /home/sander/Code/cfg/$1 /home/sander/$1
-}
+# function dotfile {
+#     mv /home/sander/$1 /home/sander/Code/cfg/$1
+#     ln -nfs /home/sander/Code/cfg/$1 /home/sander/$1
+# }
 
 # Delete entire line with command key and backspace
 bindkey "^X\x7f" backward-kill-line
@@ -125,7 +126,7 @@ bindkey "^X\x7f" backward-kill-line
 # Pip requires virtualenv
 export PIP_REQUIRE_VIRTUALENV=false
 
-
+## Pyenv
 # Add pyenv executable to PATH and
 # enable shims by adding the following
 # to ~/.profile:
@@ -135,15 +136,28 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
 
-# Google cloud SDK. source: https://formulae.brew.sh/cask/google-cloud-sdk
+# Created by `pipx` on 2023-01-26 16:22:15
+export PATH="$PATH:/Users/sander/.local/bin"
+
+## Google cloud SDK. 
+#source: https://formulae.brew.sh/cask/google-cloud-sdk
+
 # To install shell completions, add this to your profile:
 source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 # To add gcloud components to your PATH, add this to your profile:
 source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-# Created by `pipx` on 2023-01-26 16:22:15
-export PATH="$PATH:/Users/sander/.local/bin"
 
-source /Users/sander/.docker/init-zsh.sh || true # Added by Docker Desktop
+## Docker
+
+# If Docker is installed for the user use dockers init-zsh.sh script to add docker to the path
+user_file_docker="/Users/sander/.docker/init-zsh.sh"
+if [ -f "$user_file_docker" ]; then
+  # File exists, so execute
+  source /Users/sander/.docker/init-zsh.sh || true # Added by Docker Desktop
+fi
 
 # Created by Sander van Dorsten on 2023-03-20: Add Docker Desktop for Mac (docker)
 export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
+
+# fzf (Fuzzrysearch) configuration
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
