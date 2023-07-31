@@ -42,7 +42,6 @@ brew "pyenv-virtualenv"
 brew "virtualenv"
 
 # ZSH / terminal
-brew "antigen" #plugin manager for zsh
 brew "fzf" #fuzzy search
 brew "zsh"
 brew "zsh-autosuggestions"
