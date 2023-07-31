@@ -15,12 +15,12 @@ antigen bundle pyenv
 antigen bundle brew
 antigen bundle dotenv
 antigen bundle emoji
-antigen bundle history-substring-search
 
 # Load bundles from external repos
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle joshskidmore/zsh-fzf-history-search
 
 # Select theme
 antigen theme denysdovhan/spaceship-prompt
