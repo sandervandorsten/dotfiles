@@ -153,3 +153,5 @@ export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 bindkey '\^E' fzf-cd-widget # Bind key 'Ctrl+E' to search directories 
 
+# Add the Schiphol extra pypi repo to env var
+export PIP_EXTRA_INDEX_URL=$(grep 'extra-index-url' ~/.pip/pip.conf | awk -F "=" '{print $2}' | tr -d ' ')
