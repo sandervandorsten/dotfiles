@@ -108,17 +108,18 @@ cask "zoom"
 
 
 ## Security
-cask "lulu"
-cask "blockblock"
-cask "knockknock"
-cask "taskexplorer"
-cask "ransomwhere"
-cask "oversight"
-cask "kextviewr"
+# cask "lulu"
+# cask "blockblock"
+# cask "knockknock"
+# cask "taskexplorer"
+# cask "ransomwhere"
+# cask "oversight"
+# cask "kextviewr"
 
 ## Leisure
 cask "vcv-rack" # virtual modular synthesiser
 cask "steam"
+cask "parsec" # Remote Desktop
 
 # Apps installed through Apple Store
 mas "Be Focused", id: 973134470
