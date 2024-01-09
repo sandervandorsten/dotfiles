@@ -5,10 +5,12 @@ tap "homebrew/core"
 tap "buo/cask-upgrade" # interactive Cask upgrading
 tap "aws/tap"
 tap "hashicorp/tap"
+tap "databricks/tap"
 
 # Binaries
 brew "bash"
 brew "readline"
+brew "databricks"
 brew "sqlite"
 brew "xz"
 brew "autojump"
@@ -36,7 +38,7 @@ brew "tree"
 brew "zlib"
 
 # python
-brew "python@3.10"
+brew "python@3.11"
 brew "pyenv"
 brew "pyenv-virtualenv"
 brew "virtualenv"
@@ -73,7 +75,7 @@ cask "adobe-acrobat-reader"
 cask "caffeine"
 cask "discord"
 # cask "citrix-workspace"
-cask "docker"
+# cask "podman-desktop" # Should install via *.dmg from website because on M1 the brew installation is non-functional.
 cask "go2shell"
 cask "google-chrome"
 cask "google-drive"
@@ -86,7 +88,7 @@ cask "lens"
 cask "monitorcontrol" 
 cask "multipass" # Ubuntu VM
 cask "ngrok"
-cask "notable"
+cask "notion" # Notekeeping
 cask "obsidian" # Markdown Editor
 cask "postman"
 cask "pycharm"

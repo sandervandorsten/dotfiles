@@ -1,3 +1,10 @@
+# Inject profiling code
+# At the beginning of your .zshrc add following: `zmodload zsh/zprof` and at the end add: `zprof`
+# This will load zprof mod and display what your shell was doing durung your initialization.
+# Source: https://gist.github.com/elalemanyo/cb3395af64ac23df2e0c3ded8bd63b2f
+# zmodload zsh/zprof
+
+
 # Setting locale for perl: https://gist.github.com/madeagency/79dc86e8aa09aa512af5
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
@@ -137,7 +144,7 @@ source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completi
 # To add gcloud components to your PATH, add this to your profile:
 source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 
-## Docker
+## Docker & Podman
 
 # If Docker is installed for the user use dockers init-zsh.sh script to add docker to the path
 user_file_docker="/Users/sander/.docker/init-zsh.sh"
@@ -145,9 +152,12 @@ if [ -f "$user_file_docker" ]; then
   # File exists, so execute
   source /Users/sander/.docker/init-zsh.sh || true # Added by Docker Desktop
 fi
-
 # Created by Sander van Dorsten on 2023-03-20: Add Docker Desktop for Mac (docker)
-export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
+# export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
+
+# Podman
+# https://podman-desktop.io/docs/migrating-from-docker/using-the-docker_host-environment-variable
+export DOCKER_HOST=$(podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}')
 
 # fzf (Fuzzrysearch) configuration
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -155,3 +165,7 @@ bindkey '\^E' fzf-cd-widget # Bind key 'Ctrl+E' to search directories
 
 # Add the Schiphol extra pypi repo to env var
 export PIP_EXTRA_INDEX_URL=$(grep 'extra-index-url' ~/.pip/pip.conf | awk -F "=" '{print $2}' | tr -d ' ')
+
+
+# # Profiling startup time
+# zprof
