@@ -140,9 +140,9 @@ export PATH="$PATH:/Users/sander/.local/bin"
 #source: https://formulae.brew.sh/cask/google-cloud-sdk
 
 # To install shell completions, add this to your profile:
-source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+# source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 # To add gcloud components to your PATH, add this to your profile:
-source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+# source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 
 ## Docker & Podman
 
@@ -157,7 +157,7 @@ fi
 
 # Podman
 # https://podman-desktop.io/docs/migrating-from-docker/using-the-docker_host-environment-variable
-export DOCKER_HOST=$(podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}')
+# export DOCKER_HOST=$(podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}')
 
 # fzf (Fuzzrysearch) configuration
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -166,6 +166,12 @@ bindkey '\^E' fzf-cd-widget # Bind key 'Ctrl+E' to search directories
 # Add the Schiphol extra pypi repo to env var
 export PIP_EXTRA_INDEX_URL=$(grep 'extra-index-url' ~/.pip/pip.conf | awk -F "=" '{print $2}' | tr -d ' ')
 
+# Bat (Cat highlited)
+# use syntax highlighter 'bat' as alternative to cat. 
+alias cat='bat'
+# Provide syntax highlighting to -h and --help commands by overriding these entirely with bat. 
+alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
+alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 
 # # Profiling startup time
 # zprof

@@ -7,7 +7,9 @@ tap "hashicorp/tap"
 tap "databricks/tap"
 
 # Binaries
-brew "bash"
+brew "bash" # updates bash to version 5.2, default on mac is 3.x 
+brew "bat" # cat with syntax highlighting
+brew "bat-extras"
 brew "readline"
 brew "databricks"
 brew "xz"
@@ -21,11 +23,13 @@ brew "htop"
 brew "mas" # Mac Application Store interface
 brew "netcat"
 brew "node"
+brew "ncdu" # NCurses Disk Usage Explorer
 brew "openssl@3"
 brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/packer"
 brew "teleport" # Server access using proxy
 brew "tree"
+brew "yank" # Copy terminal output to clipboard
 brew "zlib"
 
 # Drivers
@@ -73,7 +77,7 @@ cask "microsoft-azure-storage-explorer"
 # brew "awscli"
 
 # Google Cloud
-cask "google-cloud-sdk"
+# cask "google-cloud-sdk"
 
 # Apps
 cask "adobe-acrobat-reader"
