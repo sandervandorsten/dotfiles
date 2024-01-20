@@ -2,9 +2,30 @@
 	defaultBranch = main
 [core]
 	autocrlf = input
+	pager = delta   	# use the git-delta plugin to show diffs
+
 [push]
 	autoSetupRemote = true
-	followTags = true
+	followTags = true 	# also push tags automatically
+
 [user]
 	name = Sander van Dorsten
 	email = sander.van.dorsten@schiphol.nl
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+	features = arctic-fox	    # grabs delta theme
+	navigate = true     		# use n and N to move between diff sections
+	light = false       		# set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+	line-numbers = true 		# show line numbers
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
+[include]
+    path = ~/.config/delta/themes.gitconfig

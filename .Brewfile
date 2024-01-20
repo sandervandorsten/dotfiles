@@ -10,6 +10,7 @@ tap "databricks/tap"
 brew "bash" # updates bash to version 5.2, default on mac is 3.x 
 brew "bat" # cat with syntax highlighting
 brew "bat-extras"
+brew "git-delta" # Color highlighting for git diffs 
 brew "readline"
 brew "databricks"
 brew "xz"
