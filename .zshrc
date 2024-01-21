@@ -83,6 +83,10 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.zgenrc
 
 # User configuration
+# Load custom zsh-autocomplete files
+# I cloned the plugin to this location
+# `cd ~/Code && git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git`
+source ~/Code/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -107,9 +111,17 @@ source $HOME/.zgenrc
 # Example aliases
 alias zshconfig="code ~/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
+alias zgenconfig="code ~/.zgenrc"
+alias brewfile="code ~/.Brewfile"
+alias gitconfig="code ~/.gitconfig"
+alias sshconfig="code ~/.sshconfig"
 
 # dotfiles alias
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+# Aliasses for exa (better ls)
+alias lss="/bin/ls"
+alias ls="exa"
 
 # move dotfile to dotfile repo
 # function dotfile {
@@ -172,6 +184,10 @@ alias cat='bat'
 # Provide syntax highlighting to -h and --help commands by overriding these entirely with bat. 
 alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
 alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
+
+# thefuck aliasses (autofix previous commands)
+eval $(thefuck --alias)
+eval $(thefuck --alias fu)
 
 # # Profiling startup time
 # zprof

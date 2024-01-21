@@ -4,12 +4,14 @@ tap "buo/cask-upgrade" # interactive Cask upgrading
 tap "azure/azd"
 tap "aws/tap"
 tap "hashicorp/tap"
-tap "databricks/tap"
+tap "homebrew/cask-fonts"
 
 # Binaries
+tap "databricks/tap"
 brew "bash" # updates bash to version 5.2, default on mac is 3.x 
-brew "bat" # cat with syntax highlighting
+brew "bat" # 'cat' with syntax highlighting
 brew "bat-extras"
+brew "exa" # better 'ls'
 brew "git-delta" # Color highlighting for git diffs 
 brew "readline"
 brew "databricks"
@@ -29,6 +31,7 @@ brew "openssl@3"
 brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/packer"
 brew "teleport" # Server access using proxy
+brew "thefuck" # autofix last cli command
 brew "tree"
 brew "yank" # Copy terminal output to clipboard
 brew "zlib"
@@ -43,6 +46,8 @@ brew "zsh"
 brew "zsh-autosuggestions"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
+cask "font-inconsolata-nerd-font" # Font for terminal with extra icons / glyphs
+
 
 ## python
 brew "python@3.11"
@@ -76,7 +81,6 @@ cask "microsoft-azure-storage-explorer"
 
 # Amazon Web Services
 # brew "awscli"
-
 # Google Cloud
 # cask "google-cloud-sdk"
 
