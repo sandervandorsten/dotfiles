@@ -58,6 +58,7 @@ brew "pipx"
 brew "poetry"
 
 # Docker / Kubernetes
+brew "ctop" # top for containers
 brew "dive" # interactively inspect docker containers
 brew "helm"
 brew "kompose"
