@@ -25,7 +25,6 @@ brew "graphviz"
 brew "htop"
 brew "mas" # Mac Application Store interface
 brew "netcat"
-brew "node"
 brew "ncdu" # NCurses Disk Usage Explorer
 brew "openssl@3"
 brew "hashicorp/tap/terraform"
@@ -48,6 +47,9 @@ brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 cask "font-inconsolata-nerd-font" # Font for terminal with extra icons / glyphs
 
+# programming languages
+brew "node"
+brew "java11" # Java runtime, could also be 'openjdk@11', seems to be an alias
 
 ## python
 brew "python@3.11"
@@ -56,6 +58,11 @@ brew "pyenv-virtualenv"
 brew "virtualenv"
 brew "pipx"
 brew "poetry"
+
+# C bindings for python packages
+brew "cmake"    
+brew "gcc"      # compiler
+brew "libomp"   # LLVM's OpenMP runtinme
 
 # Docker / Kubernetes
 brew "ctop" # top for containers
@@ -85,6 +92,10 @@ cask "microsoft-azure-storage-explorer"
 # Google Cloud
 # cask "google-cloud-sdk"
 
+# Browsers
+cask "arc"
+cask "google-chrome"
+
 # Apps
 cask "adobe-acrobat-reader"
 cask "caffeine"
@@ -92,7 +103,6 @@ cask "discord"
 # cask "citrix-workspace"
 # cask "podman-desktop" # Should install via *.dmg from website because on M1 the brew installation is non-functional.
 cask "go2shell"
-cask "google-chrome"
 cask "google-drive"
 cask "iterm2"
 cask "lastpass"

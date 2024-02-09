@@ -21,26 +21,12 @@ export ZSH="/Users/sander/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="RobbyRussell"
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-# Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
+zstyle ':omz:update' mode auto      # update automatically without asking
+zstyle ':omz:update' frequency 13   # Define how often auto-update (in days).
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -52,13 +38,13 @@ ZSH_THEME="RobbyRussell"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
 # e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -76,22 +62,16 @@ ZSH_THEME="RobbyRussell"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Load oh-my-zsh
-source $ZSH/oh-my-zsh.sh
-
-# Load zgen
-source $HOME/.zgenrc
-
+source $ZSH/oh-my-zsh.sh  # Load oh-my-zsh
+source $HOME/.zgenrc      # Load zgen
+# source ~/.bash_profile
 # User configuration
 # Load custom zsh-autocomplete files
-# I cloned the plugin to this location
+# I cloned the plugin to this location, which should be done manually
 # `cd ~/Code && git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git`
 source ~/Code/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -103,50 +83,55 @@ source ~/Code/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+# Aliases
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
+alias charm="pycharm ."
+alias brewconfig="code ~/.Brewfile"
 alias zshconfig="code ~/.zshrc"
+alias bashconfig="code ~/.bashrc"
+alias bashprofile="code ~/.bash_profile"
 alias ohmyzsh="code ~/.oh-my-zsh"
 alias zgenconfig="code ~/.zgenrc"
-alias brewfile="code ~/.Brewfile"
 alias gitconfig="code ~/.gitconfig"
 alias sshconfig="code ~/.sshconfig"
+alias config='/usr/bin/git \
+  --git-dir=$HOME/.cfg/ \
+  --work-tree=$HOME'            # dotfiles alias
+alias lss="/bin/ls"             # Aliasses for exa (better ls)
+alias ls="exa"                  # Aliasses for exa (better ls)
+alias cat='bat'                 # use syntax highlighter 'bat' as alternative to cat. 
+alias ccat="/bin/cat"           # still keep cat available
 
-# dotfiles alias
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+# Provide syntax highlighting to -h and --help commands by overriding these entirely with bat. 
+alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
+alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 
-# Aliasses for exa (better ls)
-alias lss="/bin/ls"
-alias ls="exa"
+# thefuck aliasses (autofix previous commands)
+eval $(thefuck --alias)
+eval $(thefuck --alias fu)
+
 
 # move dotfile to dotfile repo
+# think this is deprecated
 # function dotfile {
 #     mv /home/sander/$1 /home/sander/Code/cfg/$1
 #     ln -nfs /home/sander/Code/cfg/$1 /home/sander/$1
 # }
 
-# Delete entire line with command key and backspace
-bindkey "^X\x7f" backward-kill-line
-
-# Pip requires virtualenv
-export PIP_REQUIRE_VIRTUALENV=false
-
 ## Pyenv
-# Add pyenv executable to PATH and
-# enable shims by adding the following
-# to ~/.profile:
-
-export PYENV_ROOT="$HOME/.pyenv"
+# Add pyenv executable to PATH and enable shims by adding the following
+# to ~/.profile:export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
-
-# Created by `pipx` on 2023-01-26 16:22:15
-export PATH="$PATH:/Users/sander/.local/bin"
+export PATH="$PATH:/opt/homebrew/opt/openjdk11/bin"           # Add java runtime 
+export PATH="$PATH:/Users/sander/.local/bin"                  # Created by `pipx` on 2023-01-26 16:22:15
+export PATH="$PATH:/Applications/PyCharm.app/Contents/MacOS"  # add 'pycharm' to path
+# Symlink Java 11 s.t. the system can find it. mentioned in the brew installation docs. Only do this once
+# sudo ln -sfn $HOMEBREW_PREFIX/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
 
 ## Google cloud SDK. 
 #source: https://formulae.brew.sh/cask/google-cloud-sdk
@@ -173,21 +158,13 @@ fi
 
 # fzf (Fuzzrysearch) configuration
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-bindkey '\^E' fzf-cd-widget # Bind key 'Ctrl+E' to search directories 
+
+bindkey '\^E' fzf-cd-widget           # Bind key 'Ctrl+E' to search directories 
+bindkey "^X\x7f" backward-kill-line   # Delete entire line with command key and backspace
 
 # Add the Schiphol extra pypi repo to env var
 export PIP_EXTRA_INDEX_URL=$(grep 'extra-index-url' ~/.pip/pip.conf | awk -F "=" '{print $2}' | tr -d ' ')
-
-# Bat (Cat highlited)
-# use syntax highlighter 'bat' as alternative to cat. 
-alias cat='bat'
-# Provide syntax highlighting to -h and --help commands by overriding these entirely with bat. 
-alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
-alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
-
-# thefuck aliasses (autofix previous commands)
-eval $(thefuck --alias)
-eval $(thefuck --alias fu)
+export PIP_REQUIRE_VIRTUALENV=true  # Pip requires virtualenv
 
 # # Profiling startup time
 # zprof
