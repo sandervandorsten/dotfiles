@@ -69,7 +69,7 @@ source $HOME/.zgenrc      # Load zgen
 # Load custom zsh-autocomplete files
 # I cloned the plugin to this location, which should be done manually
 # `cd ~/Code && git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git`
-source ~/Code/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source ~/Code/zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -103,16 +103,16 @@ alias config='/usr/bin/git \
 alias lss="/bin/ls"             # Aliasses for exa (better ls)
 alias ls="exa"                  # Aliasses for exa (better ls)
 alias cat='bat'                 # use syntax highlighter 'bat' as alternative to cat. 
-alias ccat="/bin/cat"           # still keep cat available
+alias ccat='bat -p'             # plain style
 
 # Provide syntax highlighting to -h and --help commands by overriding these entirely with bat. 
 alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
 alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
+export BAT_PAGER='never'
 
 # thefuck aliasses (autofix previous commands)
 eval $(thefuck --alias)
 eval $(thefuck --alias fu)
-
 
 # move dotfile to dotfile repo
 # think this is deprecated
