@@ -32,6 +32,7 @@ brew "hashicorp/tap/packer"
 brew "teleport" # Server access using proxy
 brew "thefuck" # autofix last cli command
 brew "tree"
+brew "xxh" # ssh but with your own settings
 brew "yank" # Copy terminal output to clipboard
 brew "zlib"
 
@@ -114,6 +115,7 @@ cask "monitorcontrol"
 cask "ngrok"
 cask "notion" # Notekeeping
 cask "obsidian" # Markdown Editor
+cask "plex"
 cask "postman"
 cask "pycharm"
 cask "rectangle"

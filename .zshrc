@@ -19,7 +19,7 @@ export ZSH="/Users/sander/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="RobbyRussell"
+ZSH_THEME="spaceship"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -38,7 +38,7 @@ zstyle ':omz:update' frequency 13   # Define how often auto-update (in days).
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -102,8 +102,7 @@ alias config='/usr/bin/git \
   --work-tree=$HOME'            # dotfiles alias
 alias lss="/bin/ls"             # Aliasses for exa (better ls)
 alias ls="exa"                  # Aliasses for exa (better ls)
-alias cat='bat'                 # use syntax highlighter 'bat' as alternative to cat. 
-alias ccat='bat -p'             # plain style
+alias cat='bat --plain'         # use syntax highlighter 'bat' as alternative to cat. 
 
 # Provide syntax highlighting to -h and --help commands by overriding these entirely with bat. 
 alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
