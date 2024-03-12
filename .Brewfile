@@ -116,6 +116,7 @@ cask "ngrok"
 cask "notion" # Notekeeping
 cask "obsidian" # Markdown Editor
 cask "plex"
+cask "plex-media-server"
 cask "postman"
 cask "pycharm"
 cask "rectangle"
